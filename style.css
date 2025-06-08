@@ -1,234 +1,200 @@
-*{
+/* Reset */
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
-   /* display: flex; */
+
+/* Body */
+body {
+    background-color: #f0f0f0;
 }
-.main{
-    width: 25%;
-    height: 50rem;
+
+/* Main Container */
+.main {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
     background-color: #fff;
     border: 2px solid rgb(198, 21, 21);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2.4rem;
-    position: relative;
+    margin: 2rem auto;
     border-radius: 1.5rem;
-    /* box-shadow: 10px 10px 10px #ccc, 17px 17px 5px #ddd; */
-    top: 0;
+    position: relative;
+    overflow: hidden;
 }
-.main .heading{
-    position: absolute;
+
+/* Heading */
+.main .heading {
     width: 100%;
-    border-top-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
-    border-bottom-left-radius: 5rem;
-    border-bottom-right-radius: 5rem;
     height: 15rem;
-    background-color:#077fe8;;
-    top: 0;
-}
-.text-head{
-    text-align: center;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.text-head h2{
-    margin-top: 3.5rem;
-    color: white;
-}
-.container{
-    position: absolute;
-    top: 7rem;
-    left: 8%;
-    width: 85%;
-    height: 34rem;
-    background-color: #f3f3f3;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 2.5rem;
-    box-shadow: 0 15px 20px #ccc;
-}
-.bottom{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-/* .center-bottom,h2,h3{
-    text-align: center;
-
-} */
- .bottom h2,h3{
-    text-align: center;
-    color: #0085fa;
-    /* font-weight: 34px; */
-    line-height: 3rem;
- }
- .bottom h2{
-    font-weight: 45rem;
- }
- .elements{
-    width: 100%;
-    height: 20%;
-    /* background-color: rgb(136, 88, 88); */
-    border-top-left-radius: 2.5rem;
-    border-top-right-radius: 2.5rem;
+    background-color: #077fe8;
+    border-radius: 1.5rem 1.5rem 5rem 5rem;
     display: flex;
-    position: absolute;
-    top: 1.5rem;
- }
-  .welcome{
-    width: 100%;
-    height: 10%;
-    /* background-color: aqua; */
-    top: 7rem;
-    position: absolute;
- }
- .welcome h2{
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: 1.2rem;
- }
- .inputs{
-    width: 100%;
-    height: 70%;
-    /* background-color: rgb(217, 0, 255); */
-    border-bottom-left-radius: 2.5rem;
-    border-bottom-right-radius: 2.5rem;
+    color: white;
+}
 
+.container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    border-radius: 2.5rem;
+    padding: 1rem;
+    box-shadow: 0 15px 20px #ccc;
+    margin-top: -3rem;
+}
 
- }
- .align-things{
-    text-align: center;
- }
- .inputs form{
-    position: absolute;
-    top: 13rem;
-    /* display: flex; */
-    line-height: 5rem;
-
- }
- input[type="text"]{
-    /* position: absolute;
-    top: -7rem; */
-    padding: .9rem 45% .9rem 55%;
-    margin-left: .9rem;
-    border-color: #18c541;
-    background-color: #dd1818;
-    border-radius: .5rem;
-    transition: .5s;
-    /* left: 5rem; */
-    cursor: pointer;
- }
- input[type="password"]{
-    padding: 10px;
-     padding: .9rem 45% .9rem 55%;
-    margin-left: .9rem;
-     border-color: #0085fa;
-    background-color: #682727;
-    transition: .5s;
-    border-radius: .5rem;
-    cursor: pointer;
- }
-input[type="text"]:focus{
-    background-color: #077fe8;
-    outline: none;
-    color: #fff;
-}
-input[type="password"]:focus{
-    background-color: #077fe8;
-    outline: none;
-    color: #fff;
-}
-input::placeholder{
-    color: #fff;
-    padding-right: -1.2rem;
-    
-}
- .element1{
-    width: 25%;
-    height: 100%;
-    /* background-color: #0085fa; */
- }
- .element1 img{
-    border-radius: 10% 50%;
-
- }
- .element2{
-    width: 50%;
-    height: 100%;
-    text-align: center;
- }
- .element2 h1{
-    color: #0085fa;
-    text-transform: capitalize;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2.7rem;
-    
-}
- .element2 h2{
-    font-size: .9rem;
-    line-height: 1.2rem;
-    color: black;
-    font-weight: bolder;
-}
- .element2 hr{
-    height: .3rem;
-    width: 1.5rem;
-    background-color: #0085fa;
-    margin-top: .4rem;
- }
- .element2 .top{
+/* Flex layout for top images and title */
+.elements {
     display: flex;
     justify-content: space-between;
- }
- .element3{
-    width: 25%;
-    height: 100%;
- }
- .element3 img{
-    border-radius: 50% 10%;
- }
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
 
-.button-change{
+.element1, .element3 {
+    width: 25%;
+}
+
+.element2 {
+    width: 50%;
+    text-align: center;
+}
+
+/* Image responsiveness */
+/* .element1 img, .element3 img {
     width: 100%;
-    height: 15%;
-    /* background-color: #0085fa; */
-    position: absolute;
-    bottom: 5.5rem;
+    height: auto;
+    border-radius: 10% 50%;
+} */
+ .element1 img, .element3 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10% 50%;
+    object-fit: cover; /* Optional, helps cropping within aspect ratio */
 }
-.button-change button{
-    width: 80%;
-    height: 70%;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #0085fa;
-    border: none;
-    margin-left: -.6rem;
-    margin-right: 1rem;
-    cursor: pointer;
+
+
+/* Welcome text */
+.welcome h2 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* Inputs */
+.inputs form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 0.8rem;
+    width: 90%;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
     transition: 0.5s;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: bold;
 }
-.button-change button:hover{
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: #077fe8;
+    color: #fff;
+    outline: none;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+/* Login Button */
+.button-change {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.button-change button {
+    width: 90%;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    background-color: #0085fa;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-change button:hover {
     background-color: #077fe8;
 }
-.down{
-   width: 100%;
-   height: 5.7rem;
-   /* background-color: #682727; */
-   position: absolute;
-   /* top: ; */
-   bottom: -5rem;
+
+/* Bottom & Footer */
+.bottom {
+    margin-top: 2rem;
+    text-align: center;
 }
-.tex{
-   text-align: center;
+
+.down {
+    margin-top: 2rem;
+    text-align: center;
 }
-.down p{
-   font-size: 1.1rem;
-   font-family: sans-serif;
-   font-weight: bolder;
+
+.down p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .elements {
+        flex-direction: column;
+    }
+
+    .element1, .element2, .element3 {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .main {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .element2 h1 {
+        font-size: 2rem;
+    }
+
+    .inputs form {
+        gap: 0.8rem;
+    }
+ /* .element1 img, .element3 img {
+         width: 30%;
+         height: auto;
+    } */
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+
+    .button-change button {
+        font-size: 0.95rem;
+    }
+
+    .down p {
+        font-size: 0.85rem;
+    }
 }
