@@ -58,25 +58,26 @@ body {
 
 .element1, .element3 {
     width: 25%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.element1 img, .element3 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10% 50%;
+    object-fit: contain;
+}
+
 
 .element2 {
     width: 50%;
     text-align: center;
 }
 
-/* Image responsiveness */
-/* .element1 img, .element3 img {
-    width: 100%;
-    height: auto;
-    border-radius: 10% 50%;
-} */
- .element1 img, .element3 img {
-    width: 100%;
-    height: auto;
-    border-radius: 10% 50%;
-    object-fit: cover; /* Optional, helps cropping within aspect ratio */
-}
+
 
 
 /* Welcome text */
@@ -198,3 +199,14 @@ input::placeholder {
         font-size: 0.85rem;
     }
 }
+@media screen and (max-width: 768px) {
+    .elements {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .element1, .element2, .element3 {
+        width: 80%;
+    }
+}
+
