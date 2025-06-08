@@ -1,15 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
+  box-sizing: border-box;
 }
 
 body {
@@ -18,58 +11,70 @@ body {
 
 .main {
   width: 90%;
-  max-width: 400px;
+  max-width: 450px;
+  height: auto;
   background-color: #fff;
   border: 2px solid rgb(198, 21, 21);
   margin: 2.4rem auto;
   position: relative;
   border-radius: 1.5rem;
+  padding-bottom: 6rem;
 }
 
 .heading {
+  position: relative;
   width: 100%;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
   border-bottom-left-radius: 5rem;
   border-bottom-right-radius: 5rem;
-  height: 10rem;
+  height: 15rem;
   background-color: #077fe8;
-  text-align: center;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.heading h2 {
-  margin-top: 3rem;
+.text-head {
+  text-align: center;
   color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
   position: relative;
-  top: -2rem;
-  width: 90%;
-  margin: 0 auto;
-  padding: 1rem;
+  top: -4rem;
+  width: 85%;
+  margin: auto;
   background-color: #f3f3f3;
   border-radius: 2.5rem;
   box-shadow: 0 15px 20px #ccc;
+  padding: 1.5rem 1rem 4rem 1rem;
 }
 
 .elements {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .element1,
 .element2,
 .element3 {
   flex: 1;
+  text-align: center;
 }
 
 .element1 img,
 .element3 img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 10% 50%;
+  object-fit: cover;
+  display: block;
 }
 
 .element2 h1 {
@@ -83,7 +88,13 @@ body {
   font-size: 0.9rem;
   line-height: 1.2rem;
   color: black;
-  font-weight: bolder;
+  font-weight: bold;
+}
+
+.element2 .top {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.3rem;
 }
 
 .element2 hr {
@@ -93,60 +104,55 @@ body {
   margin-top: 0.4rem;
 }
 
-.element2 .top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .welcome h2 {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
 }
 
 .inputs {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
-form input[type="text"],
-form input[type="password"] {
+.inputs input[type="text"],
+.inputs input[type="password"] {
   width: 90%;
   padding: 0.9rem;
-  margin: 0.5rem auto;
-  border-radius: 0.5rem;
+  margin: 0.5rem 0;
   border: 1px solid #ccc;
-  background-color: #fff;
+  border-radius: 0.5rem;
+  background-color: #eee;
   transition: 0.3s;
 }
 
-form input[type="text"]:focus,
-form input[type="password"]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   background-color: #077fe8;
   color: #fff;
   outline: none;
 }
 
-form input::placeholder {
-  color: #aaa;
+input::placeholder {
+  color: #666;
 }
 
 .button-change {
-  margin-top: 1rem;
+  width: 100%;
   text-align: center;
+  margin-top: 1.5rem;
 }
 
 .button-change button {
   width: 90%;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
   background-color: #0085fa;
   border: none;
   cursor: pointer;
-  transition: 0.5s;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
+  transition: 0.5s;
 }
 
 .button-change button:hover {
@@ -154,29 +160,55 @@ form input::placeholder {
 }
 
 .bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   text-align: center;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+.bottom h2,
+.bottom h3 {
   color: #0085fa;
+  line-height: 1.5rem;
 }
 
 .down {
+  width: 100%;
   text-align: center;
-  padding: 1rem;
+  margin-top: 1.5rem;
 }
 
 .down p {
-  font-size: 1rem;
-  font-weight: bolder;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin: 0.5rem 0;
 }
 
+.down p:last-child {
+  margin-bottom: 1rem;
+}
+
+/* === RESPONSIVE LAYOUT === */
 @media screen and (max-width: 768px) {
   .elements {
     flex-direction: column;
+    align-items: center;
   }
 
   .element1,
   .element2,
   .element3 {
     width: 100%;
+  }
+
+  .element2 .top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    padding: 1rem;
   }
 }
